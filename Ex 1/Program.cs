@@ -66,16 +66,58 @@ namespace Ex_1
             
             //Сортування string
             string[] arrayStr = { "apple", "welcome", "gnome", "member", "spring", "book" };
-            Console.WriteLine("\n Сортування string методом Array.Sort(): ");
+            Console.WriteLine("\n");
+            Console.WriteLine("\n");
+            Console.Write("\n Массив до сортування: ");
+            foreach (string a in arrayStr)
+            {
+                Console.Write($"{a} ");
+            }
+            Console.WriteLine("\n");
+            Console.WriteLine("Iндекс елемента 'gnome' у массивi: ");
+            Console.WriteLine(Array.IndexOf(arrayStr, "welcome"));
+            Console.WriteLine(Array.BinarySearch(arrayStr, "welcome"));
+
+            Console.Write("\n Сортування string методом Array.Sort(): ");
             Array.Sort(arrayStr);
             foreach (string a in arrayStr)
             {
                 Console.Write($"{a} ");
             }
+
+            Console.WriteLine("\n");
+            Console.WriteLine("Iндекс елемента 'gnome' у массивi пiсля сортування: ");
+            Console.WriteLine(Array.IndexOf(arrayStr, "welcome"));
+            Console.WriteLine(Array.BinarySearch(arrayStr, "welcome"));
+
             //Інверування string
-            Console.WriteLine("\n Iнвертування string методом Array.Reverse(): ");
+            Console.Write("\n Iнвертування string методом Array.Reverse(): ");
             Array.Reverse(arrayStr);
             foreach (string a in arrayStr)
+            {
+                Console.Write($"{a} ");
+            }
+            Console.WriteLine("\n");
+            Console.Write("Очищення значення елементу Array.Clear(): ");
+            Array.Clear(arrayStr, 2, arrayStr.Length-2);
+            foreach (string a in arrayStr)
+            {
+                Console.Write($"{a} ");
+            }
+
+            string[] arrayStr1 = new String[arrayStr.Length - 2];
+            string[] arrayStr2 = new String[arrayStr.Length - 2];
+            Array.Copy(arrayStr, arrayStr1, arrayStr.Length-2);
+            Array.Copy(arrayStr, 2,  arrayStr2, 0, arrayStr.Length - 2);
+            Console.WriteLine("\n");
+            Console.Write("arrayStr1: ");
+            foreach (string a in arrayStr1)
+            {
+                Console.Write($"{a} ");
+            }
+            Console.WriteLine("\n");
+            Console.Write("arrayStr2: ");
+            foreach (string a in arrayStr2)
             {
                 Console.Write($"{a} ");
             }
