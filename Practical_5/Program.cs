@@ -31,13 +31,13 @@ namespace Ex_2
             int[][] array = new int[N][];
             array[0] = new int[1];
 
-           
+           // Створення ступінчатого масиву в якому кожен наступний масив має на 2 елементи більшен ніж попередній
             for (int i = 1; i < N; i++)
             {
                 array[i] = new int[i*2+1];
                
             }
-
+            // Заповнення масиву
             for (int i = 0; i < N; i++)
             {
                 int len = array[i].Length;
