@@ -50,7 +50,7 @@ namespace Ex_2
                     s += array[i][j].ToString() + " ";
 
                 }
-                Console.WriteLine($"Mассив {i}: ");
+                Console.WriteLine($"Mассив {i+1}: ");
                 Console.WriteLine(s);
                 Console.WriteLine("Максимальный елемент массиву: " + Max(array[i]));
 
