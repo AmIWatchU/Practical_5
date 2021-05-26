@@ -22,12 +22,7 @@ namespace Ex_2
                 if (a[i] > max) { max = a[i]; }
             return max;
         }
-        //Метод для виводу одновимірного масиву
-        static void Print1(int[] a)
-        {
-            for (int i = 0; i < a.Length; ++i)
-                Console.Write("{0,5} ", a[i]);
-        }
+       
 
         static void Main(string[] args)
         {
