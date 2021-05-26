@@ -97,6 +97,7 @@ namespace Ex_1
             {
                 Console.Write($"{a} ");
             }
+            //Array.Clear():
             Console.WriteLine("\n");
             Console.Write("Очищення значення елементу Array.Clear(): ");
             Array.Clear(arrayStr, 2, arrayStr.Length-2);
@@ -104,20 +105,33 @@ namespace Ex_1
             {
                 Console.Write($"{a} ");
             }
-
+            // Array.Copy(): 
+            
             string[] arrayStr1 = new String[arrayStr.Length - 2];
             string[] arrayStr2 = new String[arrayStr.Length - 2];
             Array.Copy(arrayStr, arrayStr1, arrayStr.Length-2);
-            Array.Copy(arrayStr, 2,  arrayStr2, 0, arrayStr.Length - 2);
+            
             Console.WriteLine("\n");
+            Console.WriteLine("Array.Copy()");
             Console.Write("arrayStr1: ");
             foreach (string a in arrayStr1)
             {
                 Console.Write($"{a} ");
             }
             Console.WriteLine("\n");
+            Array.Copy(arrayStr, 1, arrayStr2, 0, arrayStr.Length - 2);
             Console.Write("arrayStr2: ");
             foreach (string a in arrayStr2)
+            {
+                Console.Write($"{a} ");
+            }
+
+            //Array.Resize():
+            Console.WriteLine("\n");
+            Array.Resize(ref arrayStr, arrayStr.Length - 2);
+            arrayStr[arrayStr.Length - 1] = "New one";
+            Console.WriteLine("Пiсля Array.Resize(): ");
+            foreach (string a in arrayStr)
             {
                 Console.Write($"{a} ");
             }
